@@ -1,0 +1,6 @@
+@Nepremicnine___HostAddress = http://localhost:5239
+
+GET {{Nepremicnine___HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
