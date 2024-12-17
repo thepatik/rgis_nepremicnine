@@ -1,7 +1,22 @@
 using System;
 
-public class Uporabnik {
-	private string ime;
+public class Uporabnik
+{
+	private int id;
+
+    public int Id
+    {
+        get
+        {
+            return id;
+        }
+        set
+        {
+            id = value;
+        }
+    }
+
+    private string ime;
 	public string Ime {
 		get {
 			return ime;
@@ -48,6 +63,10 @@ public class Uporabnik {
 			tipUporabnika = value;
 		}
 	}
+
+    // Konstruktor za uporabnika
+	public Uporabnik() { }
+
     public Uporabnik(string ime, string priimek, DateOnly datumRojstva, string email, string geslo, string tipUporabnika = "najemnik")
     {
         this.Ime = ime;
@@ -63,10 +82,4 @@ public class Uporabnik {
     {
         return $"{Ime} {Priimek}, Email: {Email}, Tip: {TipUporabnika}, Rojen: {DatumRojstva}";
     }
-
-    private Backend backend;
-    
-
-
-
 }

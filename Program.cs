@@ -1,7 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using Nepremicnine__;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Configuration.GetConnectionString("DefaultConnection");
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+# if DEBUG
+Console.WriteLine("Connection string: " + connectionString);
+# endif
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connectionString));
 
 var app = builder.Build();
 

@@ -73,6 +73,8 @@ public class Pogodba {
 			znesekVarscine = value;
 		}
 	}
+
+	public Pogodba() { }
     public Pogodba(
         int id,
         int idNepremicnine,

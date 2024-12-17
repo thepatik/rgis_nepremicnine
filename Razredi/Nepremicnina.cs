@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 public class Nepremicnina
 {
@@ -17,6 +18,8 @@ public class Nepremicnina
     }
 
     private string naziv;
+    [Required]
+    [StringLength(50)]
     public string Naziv
     {
         get
@@ -30,6 +33,8 @@ public class Nepremicnina
     }
 
     private string naslov;
+    [Required]
+    [StringLength(50)]
     public string Naslov
     {
         get
@@ -43,6 +48,8 @@ public class Nepremicnina
     }
 
     private string posta;
+    [Required]
+    [StringLength(50)]
     public string Posta
     {
         get
@@ -56,6 +63,8 @@ public class Nepremicnina
     }
 
     private int postnaSt;
+    [Required]
+    [StringLength(5)]
     public int PostnaSt
     {
         get
@@ -69,6 +78,8 @@ public class Nepremicnina
     }
 
     private double povrsina;
+    [Required]
+    [Range(0, 10000)]
     public double Povrsina
     {
         get
@@ -82,6 +93,9 @@ public class Nepremicnina
     }
 
     private double vrednost;
+    [Required]
+    [Range(0, 1000000)]
+    [DataType(DataType.Currency)]
     public double Vrednost
     {
         get
@@ -95,6 +109,10 @@ public class Nepremicnina
     }
 
     private int letoIzgradnje;
+    [Required]
+    [Range(1900, 2022)]
+    [Display(Name = "Leto izgradnje")]
+    [DataType(DataType.Date)]
     public int LetoIzgradnje
     {
         get
@@ -108,6 +126,7 @@ public class Nepremicnina
     }
 
     private Uporabnik lastnik;
+    [Required]
     public Uporabnik Lastnik
     {
         get
@@ -123,7 +142,11 @@ public class Nepremicnina
 
     public static List<Nepremicnina> Nepremicnine { get; } = new List<Nepremicnina>();
 
-    
+
+    public Nepremicnina()
+    {
+    }
+
     public Nepremicnina(int id, string naziv, string naslov, string posta, int postnaSt, double povrsina, double vrednost, int letoIzgradnje, Uporabnik lastnik)
     {
         this.Id = id;

@@ -82,9 +82,13 @@ public class Oglas
         }
     }
 
-    private Backend backend;
+    public Backend Backend;
+
 
     // Konstruktor za inicializacijo oglasa
+    
+    public Oglas() { }
+
     public Oglas(int id, DateTime datumObjave, DateTime datumPoteka, Nepremicnina nepremicnina, Uporabnik objavil, string tipOglasa = "oddaja")
     {
         this.Id = id;

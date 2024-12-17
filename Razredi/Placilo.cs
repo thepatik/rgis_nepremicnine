@@ -71,9 +71,11 @@ public class Placilo
         }
     }
 
-    private Backend backend;
 
     // Konstruktor za inicializacijo plaèila
+
+    public Placilo() { }
+
     public Placilo(int id, int mesec, Pogodba pogodba, double znesek, string placiloIdZunanji)
     {
         this.Id = id;

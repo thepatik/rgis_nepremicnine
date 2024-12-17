@@ -10,3 +10,4 @@ V skladu z dodatnimi navodili datoteka z vso specifikacijo se nahaja v skupni ra
 Za dostop je potrebno zaporositi za dostop [Patrick Košir](mailto:patrick.kosir@student.um.si). Dostop se odobri na podlagi izkazene potrebe za 
 sodelovanje v projektu. 
 
+
